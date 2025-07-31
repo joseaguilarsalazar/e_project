@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'e_project.urls'
@@ -180,3 +182,11 @@ SIMPLE_JWT = {
     'SIGNING_KEY': SECRET_KEY,  # uses Django's secret key
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # make sure it matches collectstatic target
+
+# Optional but recommended for compression and caching
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
