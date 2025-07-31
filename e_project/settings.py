@@ -20,8 +20,8 @@ env = environ.Env(
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
-    '3.13.118.73:8005',
-    '94.130.228.35:8005',
+    'http://3.13.118.73:8005',
+    'http://94.130.228.35:8005',
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
