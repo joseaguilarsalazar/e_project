@@ -18,7 +18,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-ALLOWED_HOSTS = ['94.130.228.35', '3.13.118.73', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
     'http://3.13.118.73:8005',
     'http://94.130.228.35:8005',
@@ -38,8 +38,6 @@ SECRET_KEY = 'django-insecure-=aunrcyq2c=$d2t_#8$5nu&d*c!go3h(o=t4yl-4g2mq4dpdck
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
