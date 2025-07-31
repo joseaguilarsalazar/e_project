@@ -18,7 +18,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['94.130.228.35', '3.13.118.73', 'localhost', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [
     'http://3.13.118.73:8005',
     'http://94.130.228.35:8005',
