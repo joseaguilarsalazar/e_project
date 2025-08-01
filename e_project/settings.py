@@ -103,11 +103,11 @@ WSGI_APPLICATION = 'e_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),   # 👈 The name of your MySQL database
-        'USER': env('DB_USER'),      # 👈 Your MySQL username
-        'PASSWORD': env('DB_PASSWORD'),  # 👈 Your MySQL password
-        'HOST': env('DB_HOST'),            # 👈 Or your DB server IP/hostname
-        'PORT': env('DB_PORT'),                 # 👈 Default MySQL port
+        'NAME': env('DB_NAME', default='mydb'),   # 👈 The name of your MySQL database
+        'USER': env('DB_USER', default='root'),      # 👈 Your MySQL username
+        'PASSWORD': env('DB_PASSWORD', default='mypassword'),  # 👈 Your MySQL password
+        'HOST': env('DB_HOST', default='db'),            # 👈 Or your DB server IP/hostname
+        'PORT': env('DB_PORT', default='3306'),                 # 👈 Default MySQL port
         'OPTIONS': {
             'charset': 'utf8mb4',       # 👈 Recommended for full UTF-8 support
         }
